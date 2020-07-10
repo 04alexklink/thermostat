@@ -28,12 +28,13 @@ $(document).ready(function() {
     updateTemperature();
   });
 
-  
+
 
 
 
   function updateTemperature() {
     $('#temperature').text(`Current Temperature: ${thermostat.getCurrentTemperature()} degrees`);
+    $('#temperature').attr('class', thermostat.energyUsage());
   }
 
 
