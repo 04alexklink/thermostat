@@ -44,9 +44,7 @@ class Thermostat {
     return this.temperature === this.MAX_LIMIT_PSM_ON;
   }
   resetTemperature() {
-    if (this.isMaximumTemperature()) {
-      this.temperature = this.DEFAULT_TEMPERATURE;
-    }
+    this.temperature = this.DEFAULT_TEMPERATURE;
   }
   energyUsage() {
     if (this.temperature < this.MEDIUM_ENERGY_USAGE_LIMIT) {
