@@ -25,6 +25,7 @@ $(document).ready(function() {
   $('#powersaving-on').click(function () {
     thermostat.switchPowerSavingModeOn();
     $('#power-saving-status').text('on');
+    updateTemperature();
   });
 
   

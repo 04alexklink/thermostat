@@ -36,6 +36,9 @@ class Thermostat {
   }
   switchPowerSavingModeOn() {
     this.powerSavingModeOn = true;
+    if (this.temperature > 25) {
+      this.temperature = this.MAX_LIMIT_PSM_ON;
+    }
   }
   isMaximumTemperature() {
     if (this.isPowerSavingModeOn() === false) {
